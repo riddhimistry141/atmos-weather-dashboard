@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0b1220" />
+    <meta
+      name="description"
+      content="A modern weather dashboard with current conditions and a weather forecast."
+    />
+    <title>Atmos - Weather Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="https://unpkg.com/lucide@1.61.0/dist/umd/lucide.min.js"></script>
+    <script type="module" src="js/main.js"></script>
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <a class="brand" href="#" aria-label="Atmos home">
+          <span class="brand-icon" aria-hidden="true">
+            <i data-lucide="cloud-sun"></i>
+          </span>
+          <span>atmos<span class="brand-dot">.</span></span>
+        </a>
+        <p class="topbar-label">YOUR WEATHER, REIMAGINED</p>
+      </header>
+      <main>
+        <section class="search-section" aria-labelledby="page-title">
+          <p class="eyebrow">WEATHER AT A GLANCE</p>
+          <h1 id="page-title">Feel the atmosphere.</h1>
+          <p class="page-subtitle">
+            Real-time conditions and forecasts for your city.
+          </p>
+
+          <form class="search-form" id="search-form">
+            <label class="sr-only" for="city-input">Search for a city</label>
+            <span class="search-icon" aria-hidden="true">
+              <i data-lucide="search"></i>
+            </span>
+            <input
+              type="text"
+              id="city-input"
+              name="city"
+              placeholder="search a city, e.g. Mumbai"
+              autocomplete="off"
+              required
+            />
+            <button type="submit" id="search-button">
+              <span>Search</span>
+              <i data-lucide="move-up-right" aria-hidden="true"></i>
+              
+            </button>
+          </form>
+          <p class="search-hint" id="search-hint">
+            Try searching for Mumbai, London, or Tokyo.
+          </p>
+        </section>
+        <section class="weather-section" aria-label="Weather information">
+          <div
+            class="status-message"
+            id="status-message"
+            role="status"
+            aria-live="polite"
+          >
+            Search for a city to see its weather.
+          </div>
+
+          <div class="weather-content" id="weather-content" hidden>
+            <section class="current-weather card" aria-labelledby="city-name">
+              <div class="current-top">
+                <div>
+                  <p class="eyebrow">CURRENT WEATHER</p>
+                  <h2 id="city-name">—</h2>
+                  <p class="muted" id="current-date">—</p>
+                </div>
+                <div
+                  class="weather-symbol"
+                  id="current-icon"
+                  aria-hidden="true"
+                >
+                  <i data-lucide="sun"></i>
+                </div>
+              </div>
+
+              <div class="temperature-row">
+                <p class="temperature" id="temperature">—<span>°C</span></p>
+                <div class="condition-details">
+                  <p class="condition" id="condition">—</p>
+                  <p class="muted">
+                    Feels like <span id="feels-like">—</span>°C
+                  </p>
+                </div>
+              </div>
+
+              <div class="weather-stats">
+                <article class="stat">
+                  <span class="stat-label">Feels like</span>
+                  <strong id="stat-feels-like">—</strong>
+                </article>
+                <article class="stat">
+                  <span class="stat-label">Wind speed</span>
+                  <strong id="wind-speed">—</strong>
+                </article>
+                <article class="stat">
+                  <span class="stat-label">Humidity</span>
+                  <strong id="humidity">—</strong>
+                </article>
+              </div>
+            </section>
+
+            <section class="forecast-section" aria-labelledby="forecast-title">
+              <div class="section-heading">
+                <div>
+                  <p class="eyebrow">PLAN AHEAD</p>
+                  <h2 id="forecast-title">5-day forecast</h2>
+                </div>
+                <span class="forecast-badge">DAILY OUTLOOK</span>
+              </div>
+
+              <div class="forecast-grid" id="forecast-grid"></div>
+            </section>
+
+            <p class="data-credit">
+              Weather data provided by
+              <a
+                href="https://open-meteo.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Open-Meteo</a
+              >.
+            </p>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <p>
+          Made with curiosity and a little sunshine
+          <span aria-hidden="true">✳</span>
+        </p>
+        <p>Atmos Weather Dashboard · Built with JavaScript</p>
+      </footer>
+    </div>
+  </body>
+</html>

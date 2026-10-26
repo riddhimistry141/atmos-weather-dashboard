@@ -1,7 +1,7 @@
   
 
-const GEOCODING_URL = import.meta.env.GEOCODING_URL;
-const WEATHER_URL = import.meta.env.WEATHER_URL
+const GEOCODING_URL = "https://geocoding-api.open-meteo.com/v1/search";
+const WEATHER_URL = "https://api.open-meteo.com/v1/forecast";
 
 // Find a city and return its coordinates.
 export async function getCityCoordinates(cityName) {

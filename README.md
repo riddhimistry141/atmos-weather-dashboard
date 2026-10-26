@@ -66,16 +66,14 @@ Weather data is provided by [Open-Meteo](https://open-meteo.com/). Review the [O
 
 ### 1. Clone the repository
 
-Replace the placeholder below with your actual GitHub repository URL.
-
 ```bash
-git clone YOUR_GITHUB_REPOSITORY_URL
+git clone https://github.com/riddhimistry141/atmos-weather-dashboard.git
 ```
 
 ### 2. Open the project
 
 ```bash
-cd weather-dashboard
+cd atmos-weather-dashboard
 ```
 
 Open the project folder in Visual Studio Code.
@@ -117,7 +115,6 @@ weather-dashboard/
 └── README.md
 ```
 
-The `screenshots/` directory and its image files are to be added; they are not assumed to exist yet.
 
 ## 🧠 What I Learned
 
